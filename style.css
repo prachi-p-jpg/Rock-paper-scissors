@@ -1,0 +1,405 @@
+body{
+    background-color: rgb(152, 228, 39);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* ========== TOP SECTION ========== */
+.container{
+    margin-bottom: 5rem;
+    display:flex;
+    justify-content:space-evenly;
+    flex-wrap:wrap;
+    gap:1rem;
+}
+
+.stats{
+    background:white;
+    border-radius:0.3rem;
+    color:black;
+    padding:0.9rem;
+    font-weight:600;
+    font-size:0.95rem;
+}
+
+/* ========== GAME BOX ========== */
+.game{
+    border:0.125rem solid white;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    width:90%;
+    max-width:37.5rem;
+    margin:auto;
+    border-radius:1.25rem;
+    padding:1.25rem;
+    gap:1rem;
+    flex-wrap:wrap;
+}
+
+.game_name p{
+    margin:0;
+    font-weight:500;
+    font-size:clamp(1.2rem, 4vw, 1.6rem);
+    color:white;
+}
+
+.buttons{
+    display:flex;
+    justify-content:space-around;
+    flex-wrap:wrap;
+    gap:0.8rem;
+}
+
+.buttons .button{
+    background-color:white;
+    width:5rem;
+    height:5rem;
+    border-radius:0.75rem;
+    padding:0.6rem;
+}
+
+.button{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+}
+
+.button h6,
+.button h1{
+    margin:0;
+}
+
+/* ========== TRIANGLE ========== */
+.triangle{
+    position:relative;
+    width:min(80vw, 18rem);
+    height:min(75vw, 17rem);
+    margin:auto;
+    animation:rotateClock 10s linear infinite;
+}
+
+.triangle:hover{
+    animation-play-state:paused;
+}
+
+@keyframes rotateClock{
+    from{ transform:rotate(0deg); }
+    to{ transform:rotate(360deg); }
+}
+
+.icon{
+    position:absolute;
+    width:clamp(4.5rem, 18vw, 5.6rem);
+    height:clamp(4.5rem, 18vw, 5.6rem);
+    border-radius:50%;
+    background:white;
+}
+
+.icon i{
+    font-size:clamp(2rem, 6vw, 3rem);
+    margin-top:22%;
+    margin-left:18%;
+}
+
+.rock{
+    top:0;
+    left:0;
+    border:0.6rem solid blue;
+}
+
+.paper{
+    top:0;
+    right:0;
+    border:0.6rem solid rgb(204, 26, 151);
+}
+
+.scissors{
+    bottom:0;
+    left:50%;
+    transform:translateX(-50%);
+    border:0.6rem solid orange;
+}
+
+/* ========== TRIANGLE LINES ========== */
+.line{
+    position:absolute;
+    height:0.5rem;
+    background:rgb(44, 43, 43);
+    transform-origin:left center;
+}
+
+.l1{
+    top:2.5rem;
+    left:2.5rem;
+    width:70%;
+}
+
+.l2{
+    top:2.5rem;
+    left:2.5rem;
+    width:65%;
+    transform:rotate(60deg);
+}
+
+.l3{
+    top:2.5rem;
+    right:-55%;
+    width:70%;
+    transform:rotate(120deg);
+}
+
+/* ========== GAME START ========== */
+.game_start{
+    display:flex;
+    gap:2rem;
+    justify-content:center;
+    align-items:flex-start;
+    flex-wrap:wrap;
+    padding:0 1rem;
+}
+
+/* ========== RULE BOX ========== */
+.rule{
+    border:0.5rem solid white;
+    border-radius:1.25rem;
+    background-color:green;
+    width:min(90vw, 17.5rem);
+    min-height:18rem;
+    padding:1rem;
+    display:none;
+    position:fixed;
+    right:1rem;
+    bottom:5rem;
+    z-index:1000;
+}
+
+.rule h2{
+    color:white;
+    text-align:center;
+    margin:0;
+    font-size:1.4rem;
+}
+
+.rule ul{
+    list-style-type:square;
+    padding-left:1.2rem;
+}
+
+.rule li{
+    color:white;
+    font-size:0.9rem;
+    margin-bottom:0.4rem;
+}
+
+.rule li::marker{
+    color:yellow;
+    font-size:1.2rem;
+}
+
+.rule button{
+    position:absolute;
+    border-radius:50%;
+    background-color:red;
+    border:0.35rem solid white;
+    top:-1.2rem;
+    right:-1rem;
+    height:3.2rem;
+    width:3.2rem;
+}
+
+.rule button i{
+    color:white;
+    font-size:1.5rem;
+}
+
+/* ========== FIXED BUTTONS ========== */
+.rule_button,
+.next_button{
+    border:0.125rem solid white;
+    background:transparent;
+    color:white;
+    border-radius:0.6rem;
+    padding:0.5rem 1.5rem;
+    font-size:1.1rem;
+    font-weight:400;
+    position:fixed;
+    bottom:1.5rem;
+   
+}
+@media(max-width:800px){
+   .rule_button,
+.next_button{
+    padding:0.3rem 1rem;
+    font-size:0.8rem;
+   margin-right:1rem;
+} 
+}
+
+
+.rule_button{
+    right:8rem;
+}
+
+.next_button{
+    right:1rem;
+}
+
+.win_buttons{
+    display:flex;
+    justify-content:space-between;
+}
+
+/* ========== WINNER SECTION ========== */
+.winner{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:1rem;
+    width:90%;
+    max-width:30rem;
+    margin:auto;
+    padding:1.25rem;
+}
+
+.you_pick,
+.Play_button,
+.comp_pick{
+    padding:1rem;
+    color:white;
+    text-align:center;
+}
+
+.hand_box,
+.hand_peace{
+    background-color:white;
+    border-radius:50%;
+    position:relative;
+    height:5rem;
+    width:5rem;
+}
+
+.hand_box{
+    border:0.6rem solid rgb(204, 26, 151);
+}
+
+.hand_peace{
+    border:0.6rem solid orange;
+}
+
+.hand_box i,
+.hand_peace i{
+    color:black;
+    font-size:2.3rem;
+    margin-top:1.2rem;
+    margin-left:0.3rem;
+}
+
+.Play_button{
+    padding-top:4rem;
+}
+
+.Play_button h3{
+    margin:0;
+}
+
+.Play_button button{
+    margin-top:0.6rem;
+    padding:0.5rem 1rem;
+    border:none;
+    border-radius:0.3rem;
+    font-size:0.75rem;
+    font-weight:600;
+    color:rgb(90, 87, 87);
+}
+
+/* ========== HURRAY SECTION ========== */
+.hurray{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    width:90%;
+    max-width:37.5rem;
+    margin:auto;
+    padding:1.2rem;
+    text-align:center;
+}
+
+.heading h1{
+    font-size:clamp(2rem, 8vw, 3.8rem);
+    color:white;
+    margin:0;
+}
+
+.heading h2{
+    font-size:clamp(1rem, 5vw, 1.9rem);
+    color:white;
+    font-weight:500;
+    margin:0;
+}
+
+.replay{
+    border:none;
+    padding:0.7rem 2rem;
+    font-size:0.8rem;
+    border-radius:0.3rem;
+    color:rgb(117, 109, 109);
+    margin-top:2rem;
+}
+
+/* ========== SCREEN ========== */
+.screen{
+   display:none;
+    width:100%;
+    min-height:100vh;
+    padding-bottom:6rem;
+}
+
+.screen.active{
+    display:block;
+}
+
+/* ========== WIN ANIMATION ========== */
+.win-ring{
+    position:relative;
+    border-radius:50%;
+    animation:pulse 1.2s infinite;
+    box-shadow:
+    0 0 0 1rem green,
+    0 0 0 2rem rgb(23, 197, 23),
+    0 0 0 3rem rgb(89, 221, 89);
+}
+
+@keyframes pulse{
+    0%{ transform:scale(1); }
+    50%{ transform:scale(1.08); }
+    100%{ transform:scale(1); }
+}
+
+/* ========== MOBILE ========== */
+@media (max-width:768px){
+
+.game{
+    flex-direction:column;
+    text-align:center;
+}
+
+.winner{
+    flex-direction:column;
+}
+
+.rule_button{
+    right:7rem;
+}
+
+.rule{
+    right:5%;
+    bottom:5rem;
+}
+
+.Play_button{
+    padding-top:1rem;
+}
+} 

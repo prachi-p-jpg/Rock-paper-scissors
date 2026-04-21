@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css" >
+</head>
+<body>
+  <div id="header">
+    <div class="container">
+      <div class="game">
+        <div class="game_name">
+        <p>ROCK</p>
+        <p>PAPER</p>
+        <p>SCISSORS</p>
+        </div>
+        <div class="buttons">
+          <div class="button">
+            <h6>COMPUTER SCORE </h6>
+            <h1 id="pcScore">0</h1>
+          </div>
+          <div class="button">
+            <h6>YOUR SCORE </h6>
+             <h1 id="userScore">0</h1>
+          </div>
+        </div>
+      </div>
+       <div class="stats">
+     <p>TOTAL GAMES :<span id="totalGames">0</span></p>
+     <p>WINS : <span id="winCount">0</span></p>
+     <p>LOSSES : <span id="lossCount">0</span></p>
+     <p>TIE UP :<span id="tieCount">0</span></p>
+   </div>
+    </div>
+  </div>
+
+  
+
+    <div id="screen1" class="screen active">
+    <div class="game_start">
+    <div class="triangle">
+       <!-- Lines --> 
+  <div class="line l1"></div>
+  <div class="line l2"></div>
+  <div class="line l3"></div>
+
+         <div class="icon rock" id="rock"><i class="fa-solid fa-hand-back-fist"></i></div>
+          <div class="icon paper" id="paper"> <i class="fa-solid fa-hand"></i></div>
+           <div class="icon scissors" id="scissors"> <i class="fa-solid fa-hand-peace"></i></div>
+    </div>
+  </div>
+    </div>
+ 
+             <div id="rule" class="rule">
+               <h2>Game Rule</h2>
+               <ul>
+                <li>Rock beats scissors,scissors beat paper,and paper beats rock.
+
+                </li>
+                <li>Agree ahead of time whether you'll count off "rock,paper,scissors,
+                  shoot" or just "rock,paper,scissors".
+                </li>
+                <li>Use rock,paper,scissors to settle minor decisions or simply play to
+                  pass the time.
+                </li>
+                <li>If both players lay down the same hand,each player lays down another hand.</li>
+               </ul> 
+               <button type="button" id="cross" ><i class="fa-solid fa-xmark"></i></button>  
+          </div>
+          <button  id="rule_button" class="rule_button">RULES</button>
+
+
+   <div id="screen2" class="screen">
+   <div class="winner">
+     <div class="you_pick">
+       <h5>YOU PICKED</h5>
+        <!-- <div class="hand_peace"> <i class="fa-solid fa-hand-peace"></i></div> -->
+          <div id="userPick" class="hand_peace"></div>
+     </div>  
+     <div class="Play_button">
+      <h1>YOU WIN</h1>
+      <h3>AGAINST PC</h3>
+      <button class="replay">PLAY AGAIN</button>
+     </div>
+     <div class="comp_pick">
+        <h5>PC PICKED</h5>
+         <!-- <div class="hand"> <i class="fa-solid fa-hand"></i></div> -->
+          <div id="pcPick" class="hand_box"></div>
+     </div>
+     <div class="win_buttons">
+     <!-- <button  id="rule_button" class="rule_button">RULES</button> -->
+     
+     </div>
+   </div>
+   <button  id="nextBtn" class="next_button">NEXT</button>
+   </div>
+
+
+    <div id="screen3" class="screen">
+      <div class="winner">
+     <div class="you_pick">
+       <h5>YOU PICKED</h5>
+        <div id="lostPick" class="hand_peace" ></div>
+     </div>  
+     <div class="Play_button">
+      <h1>YOU Lost</h1>
+      <h3>AGAINST PC</h3>
+      <button class="replay">PLAY AGAIN</button>
+     </div>
+     <div class="comp_pick">
+        <h5>PC PICKED</h5>
+         <div id="pclostPick" class="hand_box"></div>
+     </div>
+   </div>
+   </div>
+   
+      <div id="screen4" class="screen">
+     <div class="winner">
+     <div class="you_pick">
+       <h5>YOU PICKED</h5>
+        <div id="tiePick" class="hand_peace" > </div>
+     </div>
+     <div class="Play_button">
+      <h1>TIE UP</h1>
+    
+      <button class="replay">REPLAY</button>
+     </div>
+     <div class="comp_pick">
+        <h5>PC PICKED</h5>
+         <div id="pctiePick" class="hand_box" ></div>
+     </div>
+   </div>
+   </div>
+  
+      
+   <div id="screen5" class="screen"> 
+    <div class="hurray">
+   <div class="hurray_image">
+ <img id="stars" src="img.png">
+ 
+  </div>
+    <div class="heading">
+      <h1>HURRAY!!</h1>
+      <h2>YOU WON THE GAME</h2>
+    </div> 
+    <button class="replay">PLAY AGAIN</button>
+   </div>
+   </div>
+  
+
+
+    <script src="script.js"></script>
+</body>
+</html>
