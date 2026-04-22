@@ -36,3 +36,8 @@ rock-paper-scissors/
 │── style.css
 │── script.js
 │── images/
+
+## Screenshot
+
+<img width="1355" height="618" alt="Screenshot (80)" src="https://github.com/user-attachments/assets/dbc0189d-4fa6-40a1-b463-c8ec75ea4cd2" />
+
