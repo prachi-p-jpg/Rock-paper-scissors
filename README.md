@@ -30,7 +30,7 @@ https://yourusername.github.io/rock-paper-scissors/
 ---
 
 ## 📂 Project Structure
-
+```bash
 rock-paper-scissors/
 │── index.html
 │── style.css
